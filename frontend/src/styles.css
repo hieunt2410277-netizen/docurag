@@ -1,0 +1,170 @@
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #111827;
+  background: #f4f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 16px;
+  cursor: pointer;
+  background: #111827;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page {
+  width: min(960px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.hero {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+h1 {
+  margin: 4px 0 8px;
+  font-size: clamp(42px, 8vw, 72px);
+  letter-spacing: -0.05em;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 720px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: 18px;
+  box-shadow: 0 12px 40px rgba(17, 24, 39, 0.06);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.uploadRow,
+.chatForm {
+  display: flex;
+  gap: 12px;
+}
+
+.uploadRow input,
+.chatForm input {
+  flex: 1;
+}
+
+.chatForm input {
+  min-width: 0;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 11px 12px;
+}
+
+.status {
+  margin-bottom: 0;
+  color: #4b5563;
+}
+
+.messages {
+  min-height: 360px;
+  max-height: 560px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.empty {
+  color: #9ca3af;
+  padding: 36px 0;
+  text-align: center;
+}
+
+.message {
+  width: min(760px, 92%);
+  border-radius: 14px;
+  padding: 14px 16px;
+  line-height: 1.55;
+}
+
+.message p {
+  margin: 6px 0 0;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #111827;
+  color: white;
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background: #eef2ff;
+}
+
+details {
+  margin-top: 12px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.sources {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.source {
+  background: white;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.source p {
+  color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .uploadRow,
+  .chatForm {
+    flex-direction: column;
+  }
+}
